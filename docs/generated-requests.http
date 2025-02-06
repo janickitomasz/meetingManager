@@ -1,0 +1,168 @@
+###
+POST http://localhost:8080/fullMeeting
+Content-Type: application/json
+
+{
+  "attendees": [
+    {
+      "name": "John Doe",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T09:00:00",
+          "end": "2025-02-06T10:00:00"
+        },
+        {
+          "start": "2025-02-06T14:00:00",
+          "end": "2025-02-06T15:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "08:00:00",
+        "end": "17:00:00"
+      },
+      "zoneId": "Europe/Warsaw"
+    },
+    {
+      "name": "Jane Smith",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T11:00:00",
+          "end": "2025-02-06T12:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "09:00:00",
+        "end": "18:00:00"
+      },
+      "zoneId": "Europe/Warsaw"
+    }
+  ],
+  "windowStart": "2025-02-06T08:00:00",
+  "windowEnd": "2025-02-07T18:00:00",
+  "numberOfMeetings": 1,
+  "meetingLength": 1
+}
+
+
+###
+POST http://localhost:8080/bestMeeting
+Content-Type: application/json
+
+{
+  "attendees": [
+    {
+      "name": "John Doe",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T10:00:00",
+          "end": "2025-02-06T11:00:00"
+        },
+        {
+          "start": "2025-02-06T14:00:00",
+          "end": "2025-02-06T15:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "08:00:00",
+        "end": "17:00:00"
+      },
+      "zoneId": "Europe/Warsaw"
+    },
+    {
+      "name": "Jane Smith",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T11:00:00",
+          "end": "2025-02-06T12:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "09:00:00",
+        "end": "18:00:00"
+      },
+      "zoneId": "Europe/Warsaw"
+    },
+    {
+      "name": "Alan Poe",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T05:00:00",
+          "end": "2025-02-06T06:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "07:00:00",
+        "end": "15:00:00"
+      },
+      "zoneId": "Europe/Moscow"
+    }
+  ],
+  "windowStart": "2025-02-06T08:00:00",
+  "windowEnd": "2025-02-07T18:00:00",
+  "numberOfMeetings": 3,
+  "meetingLength": 3
+}
+
+
+###
+POST http://localhost:8080/bestMeeting
+Content-Type: application/json
+
+{
+  "attendees": [
+    {
+      "name": "John Doe",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T10:00:00",
+          "end": "2025-02-06T10:15:00"
+        },
+        {
+          "start": "2025-02-06T14:15:00",
+          "end": "2025-02-06T14:30:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "08:00:00",
+        "end": "17:00:00"
+      },
+      "zoneId": "Europe/Warsaw"
+    },
+    {
+      "name": "Jane Smith",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T11:00:00",
+          "end": "2025-02-06T11:15:00"
+        },
+        {
+          "start": "2025-02-06T11:45:00",
+          "end": "2025-02-06T12:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "09:00:00",
+        "end": "18:00:00"
+      },
+      "zoneId": "Europe/Warsaw"
+    },
+    {
+      "name": "Alan Poe",
+      "bookedSlots": [
+        {
+          "start": "2025-02-06T05:45:00",
+          "end": "2025-02-06T06:00:00"
+        }
+      ],
+      "workingHours": {
+        "begin": "07:00:00",
+        "end": "15:00:00"
+      },
+      "zoneId": "Europe/Moscow"
+    }
+  ],
+  "windowStart": "2025-02-06T08:00:00",
+  "windowEnd": "2025-02-07T18:00:00",
+  "numberOfMeetings": 3,
+  "meetingLength": 12
+}
